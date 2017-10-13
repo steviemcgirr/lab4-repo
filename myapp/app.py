@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import render_template
 from flask_mysqldb import MySQL
+from flask_prometheus import monitor 
 mysql = MySQL()
 app = Flask(__name__)
 # My SQL Instance configurations 
@@ -59,5 +60,5 @@ def delete(name=None):
     return render_template('index.html', name="User recored was deleted")      #Return the data in a string format
 
 if __name__ == "__main__":
-        app.run(host='0.0.0.0', port='5000') 
-
+        monitor(app, host='0.0.0.0', port=8000)
+        app.run(host='0.0.0.0', port='5000')
