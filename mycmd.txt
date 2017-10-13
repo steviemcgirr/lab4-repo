@@ -1,0 +1,241 @@
+    1  docker run hello-world
+    2  git clone  https://github.com/baselm/lab4-base-image.git
+    3  cd lab4-base-image
+    4  ls
+    5  docker build -t mywebapp .
+    6  docker images 
+    7  docker run -p 80:5000 -d mywebapp
+    8  docker ps
+    9  docker ps 
+   10  docker stop 2b3da17657c3
+   11  ls
+   12  docker ls
+   13  docker ps
+   14  docker service ls 
+   15  docker ps 
+   16  ls
+   17  cd dockprom/
+   18  cd ..
+   19  cd lab4-base-image/
+   20  ls
+   21  cd ~/dockprom/
+   22  ls
+   23  nano mycompose.yml
+   24  dokcer stop $(docker ps -q)
+   25  dokcer stop $(docker ps -aq)
+   26  docker stop $(docker ps -aq)
+   27  docker ps 
+   28  ls
+   29  ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose -f mycompose.yml up -d 
+   30  rm -r mycompose.yml 
+   31  nano mycompose.yml
+   32  ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose -f mycompose.yml up -d 
+   33  nano mycompose.yml
+   34  ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose -f mycompose.yml up -d 
+   35  ls
+   36  rm -r mycompose.yml 
+   37  nano mycompose.yml
+   38  ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose -f mycompose.yml up -d 
+   39  docker ps
+   40  nano mycompose.yml
+   41  ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose -f mycompose.yml up -d 
+   42  docker service ls 
+   43  docker service create --replicas 5 -p 80:5000 -p 8000:8000 --name mywebapp
+   44  mywebappdocker service create --replicas 5 -p 80:80 --name web nginx
+   45  docker service create --replicas 5 -p 80:80 --name baselm/mywebapp 
+   46  docker ps 
+   47  docker service ls 
+   48  docker service rm web 
+   49  docker service ls 
+   50  docker ps
+   51  docker-compose stop baselm/mywebapp:latest
+   52  docker-compose stop 81ac6d0b691f
+   53  docker-compose stop mywebapp
+   54  docker ps 
+   55  docker-compose stop mywebapp
+   56  docker-compose --help
+   57  docker-compose stop mywebapp
+   58  docker-compose down mywebapp
+   59  docker images 
+   60  docker rm $(docker ps -aq)
+   61  docker stop $(docker ps -aq)
+   62  docker rm $(docker ps -aq)
+   63  docker ps 
+   64  docker ps -a
+   65  docker images 
+   66  docker rmi $(docker images -aq)
+   67  docker images 
+   68  cd ..
+   69  cd dockprom/
+   70  ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose up -d
+   71  cd ..
+   72  mkdir mycompose 
+   73  cd mycompose/
+   74  cat mycompose.yml
+   75  touch mycompose.yml
+   76  cat mycompose.yml 
+   77  nano mycompose.yml 
+   78  dokcer service ls
+   79  docker service ls
+   80  docker service rm mywebappservice
+   81  docker service rm web
+   82  dokcer service ls
+   83  docker service ls
+   84  curl http://localhost:8000
+   85  curl http://localhost:5000
+   86  curl http://localhost:5000/list
+   87  curl http://localhost:8000
+   88  curl http://localhost:5000/list
+   89  curl http://localhost:8000
+   90  ls
+   91  cd dockprom/
+   92  ls
+   93  cd prometheus/
+   94  ls
+   95  nano prometheus.yml 
+   96  cd ..
+   97  ls
+   98  ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose up -d
+   99  docker images 
+  100  docker run -p 80:5000 -d mywebapp
+  101  docker run -p 80:5000 -d web
+  102  docker ps 
+  103  curl http://localhost:8000
+  104  docker run -p 80:5000 -p 8000:8000 -d web
+  105  docker ps
+  106  docker stop 1c1f1206d878
+  107  docker run -p 80:5000 -p 8000:8000 -d web
+  108  docker ps 
+  109  curl http://localhost:8000
+  110  docker service 
+  111  docker service ls
+  112  docker ps 
+  113  docker-compose restart 4e03690ec10d
+  114  docker-compose restart prometheus
+  115  ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose up  -d
+  116  cd ..
+  117  ls
+  118  cd lab4-base-image/
+  119  ls
+  120  cd myapp/
+  121  nano app.py 
+  122  python3 app.py 
+  123  curl htpp://localhost:8000
+  124  curl http://localhost:8000
+  125  ls
+  126  cd lab4-base-image/
+  127  git add .
+  128  git commit -m "Adding Flask-Prometheus"
+  129  git push 
+  130  git config --global user.email basel.magableh@dit.ie
+  131  git commit -m "Adding Flask-Prometheus"
+  132  git push 
+  133  docker build -t flaskapp .
+  134  docker images 
+  135  docker tag flask:latest flaskapp:monitoring
+  136  docker tag flaskapp:latest flaskapp:monitoring
+  137  docker images 
+  138  ls
+  139  nano Dockerfile 
+  140  docker images 
+  141  docker rmi flaskapp:latest 
+  142  docker rmi flaskapp:monitoring 
+  143  docker images 
+  144  docker build -t mywebapp . 
+  145  docker images 
+  146  docker run -p 80:5000 -p 8000:8000 -d mywebapp
+  147  ls
+  148  cd myapp/
+  149  nano app.py 
+  150  python3 app.py 
+  151  nano app.py 
+  152  python3 app.py 
+  153  docker ps 
+  154  lsof -i :8000
+  155  lsof -i :5000
+  156  python3 app.py 
+  157  cd ../...
+  158  cd ../..
+  159  ls
+  160  cd lab4-base-image/
+  161  docker build -t mywebapp . 
+  162  docker run -p 80:5000 -p 8000:8000 -d mywebapp
+  163  docker images
+  164  docker rmi mywebapp
+  165  docker rmi mywebapp -f
+  166  docker run -p 80:5000 -p 8000:8000 -d mywebapp
+  167  docker build -t mywebapp . 
+  168  docker run -p 80:5000 -p 8000:8000 -d mywebapp
+  169  sudo reboot
+  170  ls
+  171  cd lab4-base-image/
+  172  nano Dockerfile 
+  173  docker images 
+  174  docker rmi mywebapp
+  175  docker rmi mywebapp -f
+  176  docker images 
+  177  docker rmi f8f627465ef8
+  178  docker rmi f8f627465ef8 -f
+  179  docker images 
+  180  docker rmi 70b776429902 -f
+  181  docker images 
+  182  cd lab4-base-image/
+  183  docker build -t mywepflaskapp .
+  184  docker run -p 80:5000 -p 8000:8000 -d mywebflaskapp
+  185  docker images 
+  186  docker run -p 80:5000 -p 8000:8000 -d mywepflaskapp
+  187  docker ps 
+  188  docker ps -a
+  189  docker rm $(docker ps -aq)
+  190  docker rm $(docker ps -aq) -f
+  191  docker ps -a
+  192  docker ps 
+  193  docker run -p 80:5000 -p 8000:8000 -d mywepflaskapp
+  194  nano Dockerfile 
+  195  docker images ]
+  196  docker images 
+  197  docker rmi mywepflaskapp -f
+  198  docker build -t myweb .
+  199  docker run -p 80:5000 -p 8000:8000 -d myweb:latest
+  200  sudo netstat -nlp | grep 8000
+  201  kill -9 1629
+  202  sudo kill -9 1629
+  203  docker run -p 80:5000 -p 8000:8000 -d myweb:latest
+  204  docker ps 
+  205  cd ..
+  206  ls
+  207  cd dockprom/
+  208  ls
+  209  ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose up -d
+  210  cd prometheus/
+  211  ls
+  212  nano prometheus.yml 
+  213  curl http://localhost:5000
+  214  curl http://localhost:8000
+  215  docker ps
+  216  docker inspect 75b022466247
+  217  nano prometheus.yml 
+  218  cd ..
+  219  ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose up -d
+  220  docker-compose restart prometheus
+  221  docker update --label org.label-schema.group: "monitoring" 
+  222  docker ps
+  223  docker update --label org.label-schema.group: "monitoring" 75b022466247
+  224  docker images 
+  225  docker update --label org.label-schema.group: "monitoring" 68cfcf836a36
+  226  docker info
+  227  docker ps
+  228  docker inspect 75b022466247
+  229  cd ~/lab4-base-image/
+  230  nano Dockerfile 
+  231  docker ps -a
+  232  docker rm 75b022466247 -f
+  233  docker ps
+  234  docker ps -a
+  235  docker images 
+  236  docker rmi myweb
+  237  docker rmi myweb -f
+  238  sudo netstat -nlp | grep 8000
+  239  history 
+  240  echo history > mycmd.txt
+  241  nano mycmd.txt 

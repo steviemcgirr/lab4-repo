@@ -6,7 +6,7 @@
 FROM ubuntu:latest
 # File Author / Maintainer
 MAINTAINER MBasel  Magableh
-
+Label org.label-schema.group="monitoring"
 # Update the sources list
 RUN apt-get update
 # Install Python and Basic Python Tools
@@ -22,6 +22,8 @@ RUN pip3 install --upgrade pip
 RUN pip3 install -r /myapp/requirements.txt
 # Expose ports
 EXPOSE 5000
+EXPOSE 8000
+#EXPOSE 8000
 # Set the default directory where CMD will execute
 WORKDIR /myapp
 # Set the default command to execute
