@@ -19,7 +19,7 @@ ADD /myapp /myapp
 # Upgrade  PIP
 RUN pip3 install --upgrade pip
 # Get pip to download and install requirements:
-RUN pip3 install -r /myapp/requirements.txt
+#RUN pip3 install -r /myapp/requirements.txt
 # Expose ports
 EXPOSE 5000 8000
 #EXPOSE 8000
