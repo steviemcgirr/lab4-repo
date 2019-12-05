@@ -1,3 +1,2 @@
 Flask
-flask-mysqldb
-flask_prometheus
+
