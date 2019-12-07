@@ -1,16 +1,9 @@
-############################################################
-# Dockerfile to build Python WSGI Application Containers
-# Based on Ubuntu
-############################################################
 # Set the base image to Ubuntu
 FROM ubuntu:latest
-# File Author / Maintainer
-MAINTAINER MBasel  Magableh
-Label org.label-schema.group="monitoring"
 # Update the sources list
 RUN apt-get update
 # Install Python and Basic Python Tools
-RUN apt-get install -y python3 python3-pip mysql-client libmysqlclient-dev
+RUN apt-get install -y python3 python3-pip                          
 #copy app.py into /app folder 
 ADD /myapp /myapp
 
@@ -30,3 +23,5 @@ WORKDIR /myapp
 # when creating a new container
 # i.e. using Flask to serve the application
 CMD python3 app.py
+
+
