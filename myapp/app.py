@@ -4,6 +4,9 @@ app = Flask(__name__, static_url_path='/static')
 @app.route("/", methods=['GET', 'POST'])
 def hello():
     return render_template('index.html')
+@app.route('/<path:path>')
+def static_file(path):
+    return app.send_static_file(path)
 @app.route("/index.html", methods=['GET', 'POST'])
 def index():
     return render_template('index.html')
