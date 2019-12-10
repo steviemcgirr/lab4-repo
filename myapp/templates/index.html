@@ -30,13 +30,13 @@ body {font-family: "Lato", sans-serif}
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
  <!-- Automatic Slideshow Images -->
   <div class="mySlides w3-display-container w3-center">
-    <img src="/static/images/wedding.jpg" style="width:50%;margin-top:20px">
+    <img src="{{url_for('static', filename='wedding.jpg')}}" style="width:50%;margin-top:20px">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
       <h3>Conall's Wedding</h3>  
     </div>
   </div>
   <div class="mySlides w3-display-container w3-center">
-    <img src="/static/images/myself.jpg" style="width:50%;margin-top:20px">
+    <img src="{{url_for('static', filename='myself.jpg')}}" style="width:50%;margin-top:20px">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
       <h3>Sligo</h3>  
     </div>
@@ -62,7 +62,7 @@ body {font-family: "Lato", sans-serif}
      <!-- Image of location/map -->
 
     <div class="w3-display-container w3-center">
-    <img src="/static/images/sunny.jpg" class="w3-image w3-greyscale-min" style="width:50%">
+    <img src= "{{url_for('static', filename='sunny.jpg')}}" class="w3-image w3-greyscale-min" style="width:50%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
       <h3>Sunny</h3>  
     </div>
